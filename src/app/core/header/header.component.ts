@@ -12,10 +12,21 @@ export class HeaderComponent {
   isHome$ = this.headerService.isHome();
 
   menuItems = [
-    { title: 'About Me', homePath: '/', fragment: 'about', pagePath: '/about' },
+    {
+      title: 'About Me',
+      homePath: '/about',
+      fragment: 'about',
+      pagePath: '/about',
+    },
+    {
+      title: 'Work Experience',
+      homePath: '/experience',
+      fragment: '',
+      pagePath: '/experience',
+    },
     {
       title: 'My Projects',
-      homePath: '/',
+      homePath: '/projects',
       fragment: 'projects',
       pagePath: '/projects',
     },

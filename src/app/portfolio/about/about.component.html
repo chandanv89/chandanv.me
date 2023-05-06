@@ -1,12 +1,6 @@
-<div
-  class="d-flex justify-content-center vw-90 mx-auto"
-  *ngIf="bio$ | async as bio"
->
-  <div
-    *ngFor="let options of respOptions"
-    [ngClass]="options.viewClasses"
-    class="flex-column align-items-center text-center w-75"
-  >
+<div class="d-flex justify-content-center vw-90 mx-auto" *ngIf="bio$ | async as bio">
+  <div *ngFor="let options of respOptions" [ngClass]="options.viewClasses"
+    class="flex-column align-items-center w-75">
     <h1 [ngClass]="options.headingClass" class="mb-5">
       <span class="font-weight-bold">About</span> Me
     </h1>
@@ -14,5 +8,9 @@
       <h4 *ngIf="!options.useSmallerHeadings" class="mb-4">{{ par }}</h4>
       <h5 *ngIf="options.useSmallerHeadings" class="mb-4">{{ par }}</h5>
     </div>
+    <button class="mt-3 mb-5 btn btn-outline-dark" routerLink="/experience">
+      Work Experience
+      <i class="ml-1 fas fa-angle-right"></i>
+    </button>
   </div>
 </div>
